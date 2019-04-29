@@ -20,4 +20,14 @@ export default function Template({data}) {
 
 }
 
-export const postQuery = graphql()
+export const postQuery = graphql`
+query BlogPostPath($path: String!){
+   markdownRemark(frontmatter: { path: { eq: $path } }) {
+     html
+     frontmatter{
+     
+     }
+   
+   }
+}
+`
