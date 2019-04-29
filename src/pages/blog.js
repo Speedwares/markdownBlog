@@ -11,7 +11,12 @@ const BlogPage = ({data}) => (
       {data.allMarkdownRemark.edges.map(post => (
         <div key={post.node.id}>
             <h3> {post.node.frontmatter.title}</h3>
+            <br />
+            <br />
+            <small>Posted by {post.node.frontmatter.author} on {post.node.frontmatter.date}</small>
+            
         </div>
+
 
 
       ))}
