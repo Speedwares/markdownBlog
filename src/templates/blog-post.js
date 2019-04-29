@@ -11,7 +11,7 @@ export default function Template({data}) {
       <br />
       <h4>Posted by {post.frontmatter.author} on {post.node.frontmatter.date}</h4>
       <br />
-      <div dangerouslySetInnerHTML={{__html: post.html}}/>
+      <div dangerouslySetInnerHTML={{__html: post.html }}/>
 
 
     </div>
@@ -19,3 +19,5 @@ export default function Template({data}) {
 
 
 }
+
+export const postQuery = graphql()
